@@ -1,67 +1,71 @@
 import {
+  IconBrandBlogger,
   IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandWhatsapp,
   IconBrandX,
-  IconExchange,
+  IconBriefcase,
   IconHome,
-  IconNewSection,
-  IconTerminal2,
+  IconMail,
+  IconUser,
 } from "@tabler/icons-react";
 
 export const links = [
   {
     title: "Home",
-    icon: (
-      <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
+    icon: <IconHome className="h-full w-full " />,
+    href: "/",
   },
 
   {
-    title: "Products",
-    icon: (
-      <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
+    title: "About Me",
+    icon: <IconUser className="h-full w-full " />,
+    href: "/about",
   },
   {
-    title: "Components",
-    icon: (
-      <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
+    title: "Portfolio",
+    icon: <IconBriefcase className="h-full w-full " />,
+    href: "/portfolio",
   },
   {
-    title: "Aceternity UI",
-    icon: (
-      <img
-        src="https://assets.aceternity.com/logo-dark.png"
-        width={20}
-        height={20}
-        alt="Aceternity Logo"
-      />
-    ),
-    href: "#",
-  },
-  {
-    title: "Changelog",
-    icon: (
-      <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
+    title: "Blog",
+    icon: <IconBrandBlogger className="h-full w-full " />,
+    href: "/blog",
   },
 
   {
-    title: "Twitter",
-    icon: (
-      <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
+    title: "Contact Me",
+    icon: <IconMail className="h-full w-full " />,
+    href: "/contact",
+  },
+];
+
+export const socials = [
+  {
+    title: "Github",
+    icon: <IconBrandGithub className="w-5 h-5" />,
+    href: "https://github.com/wyasyn",
   },
   {
-    title: "GitHub",
-    icon: (
-      <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
+    title: "Linkedin",
+    icon: <IconBrandLinkedin className="w-5 h-5" />,
+    href: "https://www.linkedin.com/in/yasin-walum",
+  },
+  {
+    title: "X.com",
+    icon: <IconBrandX className="w-5 h-5" />,
+    href: "https://x.com/wyasyn",
+  },
+  {
+    title: "WhatsApp",
+    icon: <IconBrandWhatsapp className="w-5 h-5" />,
+    href: `https://wa.me/${
+      process.env.NEXT_PUBLIC_PHONE
+    }?text=${encodeURIComponent("Hi! I'm interested in your services.")}`,
+  },
+  {
+    title: "Mail",
+    icon: <IconMail className="w-5 h-5" />,
+    href: `mailto:${process.env.NEXT_PUBLIC_EMAIL}`,
   },
 ];

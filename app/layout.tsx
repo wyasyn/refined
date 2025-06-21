@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, DM_Mono, DM_Serif_Display } from "next/font/google";
+import { DM_Sans, DM_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 
@@ -8,10 +8,9 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
 });
 
-const dmSerif = DM_Serif_Display({
+const playfairDisplay = Playfair_Display({
   variable: "--font-serif",
   subsets: ["latin"],
-  weight: "400",
 });
 
 const dmMono = DM_Mono({
@@ -33,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${dmSans.variable} ${dmMono.variable} ${dmSerif.variable} antialiased`}
+        className={`${dmSans.variable} ${dmMono.variable} ${playfairDisplay.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

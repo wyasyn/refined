@@ -1,3 +1,4 @@
+import ModeToggle from "@/components/modetoggle";
 import { Navbar } from "@/components/nav-bar";
 import { ReactNode } from "react";
 
@@ -6,6 +7,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <>
       <Navbar />
       {children}
+      <ModeToggle />
     </>
   );
 }
